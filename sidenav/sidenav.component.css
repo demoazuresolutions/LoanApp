@@ -1,0 +1,129 @@
+body {
+}
+
+.navContainer {
+  background: #FFF;
+  width: 10rem;
+  border-right: 0.3px solid #6c757d;
+}
+
+.navContainer .navItem {
+  border-bottom: 0.3px solid #6c757d;
+  padding-top: 10px;
+}
+
+  .navContainer .navItem:hover {
+    background-color: #4d4dff; /*#77CCFF;*/
+    color: #FFF;
+    cursor: pointer;
+  }
+
+  .navContainer .navItem:last-child {
+    border: 0;
+  }
+
+  .dashboard {
+    width: 10rem;
+  }
+.dashboardmenu {
+  background-image: url('../../images/house-door.svg');
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1rem;
+}
+
+.dashboardTxt, .loansTxt, .customersTxt, .paymentsTxt, .invoicesTxt, .plansTxt, .reportsTxt, .settingsTxt {
+  width: 7rem;
+  display: inline-block;
+  margin-left: 0.3rem;
+  vertical-align: bottom;
+  font-size: small;
+}
+
+.loansmenu {
+  background-image: url('../../images/loans.png');
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1rem;
+}
+.customersmenu {
+  background-image: url('../../images/users.svg');
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1rem;
+}
+.paymentsmenu {
+  background-image: url('../../images/wallet2.svg');
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1rem;
+}
+.invoicesmenu {
+  background-image: url('../../images/file-invoice-dollar.svg');
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1rem;
+}
+.plansmenu {
+  background-image: url('../../images/details-more.svg');
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1rem;
+}
+.reportsmenu {
+  background-image: url('../../images/graph-up-arrow.svg');
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1rem;
+}
+.settingsmenu {
+  background-image: url('../../images/settings.svg');
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1rem;
+}
+.loggedIn {
+  width: 10rem;
+  background-color: #A9A9A9;
+  color: #FFF;
+  height: 3rem;
+  margin-top: 250px;
+  font-size: small;
+  padding: 5px;
+}
+.link-active {
+  background-color: #4d4dff; /*#77CCFF;*/
+  color: #FFF;
+}

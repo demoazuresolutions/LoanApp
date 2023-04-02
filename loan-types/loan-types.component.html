@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="entity">Loan Types</div>
+</div>
+
+<div class="loantypescontainer col-md-12">
+  <div class="gridContainer">
+    <div *ngFor="let loan of columns">
+      <!--<div class="header {{loan.valueKey}}" title="{{loan.title}}">{{loan.name}}</div>-->
+      <div class="customer-list" *ngFor="let data of rows; let i=index">
+        <div [ngSwitch]="loan.field">
+          <!--<div *ngSwitchCase="'link'">
+            <app-gridlink class="datarow" [param]="data[loan.valueKey]"></app-gridlink>
+          </div>-->
+          <div *ngSwitchCase="'text'">
+            <div class="datarow {{loan.valueKey}}" [title]="data[loan.valueKey]">{{data[loan.valueKey]}}</div>
+          </div>
+        </div>
+        <div class="rowSeperator" *ngIf="(rows.length-1) != i"></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+

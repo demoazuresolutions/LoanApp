@@ -1,0 +1,45 @@
+<div class="navContainer">
+  <div class="dashboard navItem" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{exact: true}">
+    <div class="dashboardmenu"></div>
+    <div class="dashboardTxt" [routerLink]="['/dashboard']">Dashboard</div>
+  </div>
+
+  <div class="loans navItem" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{exact: true}">
+    <div class="loansmenu"></div>
+    <div class="loansTxt" [routerLink]="['/loans']">Loans</div>
+  </div>
+
+  <div class="customers navItem" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{exact: true}">
+    <div class="customersmenu"></div>
+    <div class="customersTxt" [routerLink]="['/customers']">Customers</div>
+  </div>
+
+  <div class="payments navItem" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{exact: true}">
+    <div class="paymentsmenu"></div>
+    <div class="paymentsTxt" [routerLink]="['/payments']">Payments</div>
+  </div>
+
+  <div class="invoices navItem" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{exact: true}">
+    <div class="invoicesmenu"></div>
+    <div class="invoicesTxt" [routerLink]="['/invoices']">Invoices</div>
+  </div>
+
+  <div class="plans navItem" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{exact: true}">
+    <div class="plansmenu"></div>
+    <div class="plansTxt" [routerLink]="['/loan-types']">Loan Plans</div>
+  </div>
+
+  <div class="reports navItem" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{exact: true}">
+    <div class="reportsmenu"></div>
+    <div class="reportsTxt" [routerLink]="['/reports']">Reports</div>
+  </div>
+
+  <div class="settings navItem" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{exact: true}">
+    <div class="settingsmenu"></div>
+    <div class="settingsTxt" [routerLink]="['/settings']">Settings</div>
+  </div>
+</div>
+
+<div class="loggedIn">
+  Logged In As:
+</div>

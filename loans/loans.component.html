@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="entity">Loans</div>
+  <div class="addNew">
+    <button class="addCustomer" type="button">Add New Loan</button>
+  </div>
+</div>
+
+<div class="invoicescontainer col-md-12">
+  <div class="searchFilterContainer">
+    <div class="searchContainer">
+      <input type="text" placeholder="Enter text to search" />
+    </div>
+  </div>
+  <div class="gridContainer">
+    <div *ngFor="let loan of columns">
+      <div class="header {{loan.valueKey}}" title="{{loan.title}}">{{loan.name}}</div>
+      <div class="customer-list" *ngFor="let data of rows; let i=index">
+        <div [ngSwitch]="loan.field">
+          <div *ngSwitchCase="'link'">
+            <app-gridlink class="datarow" [param]="data[loan.valueKey]"></app-gridlink>
+          </div>
+          <div *ngSwitchCase="'text'">
+            <div class="datarow" [title]="data[loan.valueKey]" [ngClass]="getLoanStatus(data[loan.valueKey], loan.valueKey)">{{data[loan.valueKey]}}</div>
+          </div>
+        </div>
+        <div class="rowSeperator" *ngIf="(rows.length-1) != i"></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
