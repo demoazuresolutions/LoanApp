@@ -1,0 +1,13 @@
+C:\Users\nandulav\source\repos\LoanApp\LoanApp.DB\bin\Debug\netcoreapp3.1\LoanApp.DB.deps.json
+C:\Users\nandulav\source\repos\LoanApp\LoanApp.DB\bin\Debug\netcoreapp3.1\LoanApp.DB.runtimeconfig.json
+C:\Users\nandulav\source\repos\LoanApp\LoanApp.DB\bin\Debug\netcoreapp3.1\LoanApp.DB.runtimeconfig.dev.json
+C:\Users\nandulav\source\repos\LoanApp\LoanApp.DB\bin\Debug\netcoreapp3.1\LoanApp.DB.dll
+C:\Users\nandulav\source\repos\LoanApp\LoanApp.DB\bin\Debug\netcoreapp3.1\LoanApp.DB.pdb
+C:\Users\nandulav\source\repos\LoanApp\LoanApp.DB\obj\Debug\netcoreapp3.1\LoanApp.DB.csproj.AssemblyReference.cache
+C:\Users\nandulav\source\repos\LoanApp\LoanApp.DB\obj\Debug\netcoreapp3.1\LoanApp.DB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nandulav\source\repos\LoanApp\LoanApp.DB\obj\Debug\netcoreapp3.1\LoanApp.DB.AssemblyInfoInputs.cache
+C:\Users\nandulav\source\repos\LoanApp\LoanApp.DB\obj\Debug\netcoreapp3.1\LoanApp.DB.AssemblyInfo.cs
+C:\Users\nandulav\source\repos\LoanApp\LoanApp.DB\obj\Debug\netcoreapp3.1\LoanApp.DB.csproj.CoreCompileInputs.cache
+C:\Users\nandulav\source\repos\LoanApp\LoanApp.DB\obj\Debug\netcoreapp3.1\LoanApp.DB.dll
+C:\Users\nandulav\source\repos\LoanApp\LoanApp.DB\obj\Debug\netcoreapp3.1\LoanApp.DB.pdb
+C:\Users\nandulav\source\repos\LoanApp\LoanApp.DB\obj\Debug\netcoreapp3.1\LoanApp.DB.genruntimeconfig.cache
