@@ -1,0 +1,81 @@
+<ng-container class="dashboardContainer">
+  <div class="container">
+    <div class="entity">Dashboard</div>
+    <div class="addNew">
+      <button class="addCustomer" type="button">Reports</button>
+    </div>
+  </div>
+
+  <div class="cardContainer">
+    <div class="card customers">
+      <div class="cardValue">68</div>
+      <div class="cardTitle">Customers</div>
+    </div>
+    <div class="card totalLoans">
+      <div class="cardValue">69</div>
+      <div class="cardTitle">Total Loans</div>
+    </div>
+    <div class="card apprdLoans">
+      <div class="cardValue">70</div>
+      <div class="cardTitle">Approved Loans</div>
+    </div>
+    <div class="card pendingLoans">
+      <div class="cardValue">71</div>
+      <div class="cardTitle">Pending Loans</div>
+    </div>
+    <div class="card riskLoans">
+      <div class="cardValue">56</div>
+      <div class="cardTitle">Risk Loans</div>
+    </div>
+    <div class="card receivables">
+      <div class="cardValue">73</div>
+      <div class="cardTitle">Total Receivables</div>
+    </div>
+  </div>
+
+  <div class="recentLoans">
+    <span>Recent Loans</span>
+  </div>
+  <div class="dashboardloanscontainer col-md-12">
+    <div class="gridContainer">
+      <div *ngFor="let dashboard of columns">
+        <div class="header {{dashboard.valueKey}}" title="{{dashboard.title}}">{{dashboard.name}}</div>
+        <div class="customer-list" *ngFor="let data of rows; let i=index">
+          <div [ngSwitch]="dashboard.field">
+            <div *ngSwitchCase="'link'">
+              <app-gridlink class="datarow" [param]="data[dashboard.valueKey]"></app-gridlink>
+            </div>
+            <div *ngSwitchCase="'text'">
+              <div class="datarow" [title]="data[dashboard.valueKey]" [ngClass]="getLoanStatus(data[dashboard.valueKey], dashboard.valueKey)">{{data[dashboard.valueKey]}}</div>
+            </div>
+          </div>
+          <div class="rowSeperator" *ngIf="(rows.length-1) != i"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="recentCustomers">
+    <span>Recent Customers</span>
+  </div>
+
+  <div class="dashboardcustomerscontainer col-md-12">
+    <div class="gridContainer">
+      <div *ngFor="let customer of customercolumns">
+        <div class="customer-header {{customer.valueKey}}" title="{{customer.title}}">{{customer.name}}</div>
+        <div class="customer-list" *ngFor="let data of customerrows; let i=index">
+          <div [ngSwitch]="customer.field">
+            <div *ngSwitchCase="'link'">
+              <app-gridlink class="datarow" [param]="data[customer.valueKey]"></app-gridlink>
+            </div>
+            <div *ngSwitchCase="'text'">
+              <div class="datarow" [title]="data[customer.valueKey]">{{data[customer.valueKey]}}</div>
+            </div>
+          </div>
+          <div class="rowSeperator" *ngIf="(rows.length-1) != i"></div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

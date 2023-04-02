@@ -1,0 +1,30 @@
+.sidenavContent {
+  height: 94vh;
+  width: 10rem;
+  border-right: 0.3px solid #6c757d;
+  /*display: inline-block;*/
+}
+.maincontainer {
+  display: flex;
+  width: 100%;
+}
+.mainContent {
+    width:87vw;
+    height: 88vh;
+    background-color: #f2f2f2;
+    overflow: auto;
+    padding-bottom: 10px
+}
+.footerContent {
+    width: 87vw;
+}
+
+div::-webkit-scrollbar {
+  background: #fff;
+  width: 5px;
+  height: 15px;
+}
+
+div::-webkit-scrollbar-thumb {
+  background: #c5c5c5;
+}

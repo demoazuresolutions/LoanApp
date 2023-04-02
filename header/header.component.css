@@ -1,0 +1,48 @@
+body {
+}
+
+.appName {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    display: inline-block;
+    width: 20%;
+}
+.projectName {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: small;
+  display: inline-block;
+  width: 80%;
+}
+.menu {
+  /*background-image: url('../../images/menu.png');*/
+  width: 2rem;
+  height: 2rem;
+  /*background-repeat: no-repeat;
+    background-size: contain;*/
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1rem;
+}
+.loanTxt {
+  width: 10rem;
+  display: inline-block;
+  margin-left: 1rem;
+}
+.header {
+    width: 100%;
+    background-color: #4d4dff;/*#77CCFF;*/
+    color: #FFF;
+}
+.userIcon {
+  width: 2rem;
+  height: 1.5rem;
+  display: inline-block;
+  /*vertical-align: middle;*/
+  margin-left: 1rem;
+}
+.prjctTxt {
+  width: 10rem;
+  display: inline-block;
+  /*margin-left: 0.5rem;*/
+}
+

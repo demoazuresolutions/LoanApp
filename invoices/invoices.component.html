@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="entity">Invoices</div>
+  <div class="addNew">
+    <button class="addCustomer" type="button">Create New Invoice</button>
+  </div>
+</div>
+
+<div class="invoicescontainer col-md-12">
+  <div class="searchFilterContainer">
+    <div class="searchContainer">
+      <input type="text" placeholder="Enter text to search" />
+    </div>
+  </div>
+  <div class="gridContainer">
+    <div *ngFor="let invoice of columns">
+      <div class="header {{invoice.valueKey}}" title="{{invoice.title}}">{{invoice.name}}</div>
+      <div class="customer-list" *ngFor="let data of rows; let i=index">
+        <div [ngSwitch]="invoice.field">
+          <div *ngSwitchCase="'link'">
+            <app-gridlink class="datarow" [param]="data[invoice.valueKey]"></app-gridlink>
+          </div>
+          <div *ngSwitchCase="'text'">
+            <div class="datarow" [title]="data[invoice.valueKey]">{{data[invoice.valueKey]}}</div>
+          </div>
+        </div>
+        <div class="rowSeperator" *ngIf="(rows.length-1) != i"></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+

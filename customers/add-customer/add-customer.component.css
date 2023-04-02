@@ -1,0 +1,45 @@
+.modal-header {
+    height: 8vh;
+}
+.modal-header .close {
+    margin: -1.2rem -1rem -1rem auto;
+}
+.modal-title {
+  font-size: 14px;
+}
+
+.modal-body {
+  font-size: 12px;
+  height: 64vh;
+  overflow: auto;
+}
+.modal-footer {
+    height: 8vh;
+}
+  .modal-footer .btn {
+    font-size: 12px;
+    background: #6666FF;
+    margin: -2px 100px 0 0;
+    width: 5vw;
+    border: 0;
+    color: #fff;
+  }
+.form-field {
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 0.3rem;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.form-input {
+    border: 0;
+    width: 100%;
+}
+div::-webkit-scrollbar {
+  background: #fff;
+  width: 5px;
+  height: 15px;
+}
+
+div::-webkit-scrollbar-thumb {
+  background: #c5c5c5;
+}

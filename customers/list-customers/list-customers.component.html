@@ -1,0 +1,75 @@
+<!--<p>list-customers works!</p>-->
+<!--<ngx-datatable #myTable class="material"
+               [attr.columns]="columns"
+               [attr.rows]="rows"
+               [attr.sortType]="'multi'"
+               [attr.headerHeight]="50"
+               [attr.rowHeight]="50"
+               [attr.footerHeight]="50"
+               [attr.scrollbarV]="true"
+               [attr.scrollbarH]="true"
+               [attr.columnMode]="ColumnMode.force">-->
+<!--<ngx-datatable-column prop="customerId" name="Customer Id"></ngx-datatable-column>
+<ngx-datatable-column prop="firstName" name="First Name"></ngx-datatable-column>
+<ngx-datatable-column prop="lastName" name="Last Name"></ngx-datatable-column>
+<ngx-datatable-column prop="phoneNumber" name="Phone Number"></ngx-datatable-column>
+<ngx-datatable-column prop="emailAddress" name="Email Address"></ngx-datatable-column>
+<ngx-datatable-column prop="address" name="Address"></ngx-datatable-column>
+<ngx-datatable-column prop="department" name="Department"></ngx-datatable-column>-->
+<!--</ngx-datatable>-->
+
+<div class="container">
+  <div class="entity">Customers</div>
+  <div class="addNew">
+    <button class="addCustomer" type="button" (click)="addCustomer()">Add Customer</button>
+  </div>
+</div>
+
+<div class="customersContainer col-md-12">
+  <div class="searchFilterContainer">
+    <div class="searchContainer">
+      <input type="text" placeholder="Enter text to search" [(ngModel)]="searchText" name="search" />
+    </div>
+  </div>
+  <div class="gridContainer">
+    <div *ngFor="let customer of columns">
+      <div class="header-section">
+        <div class="header {{customer.valueKey}}" title="{{customer.title}}" (click)="sort(customer.valueKey)">
+        <span>{{customer.name}}</span><span [ngClass]="sortorderasc == true ? 'sortasc' : 'sortdesc'"></span></div>
+        <!--<div class="sort"></div>-->
+      </div>
+      <div class="customer-list-parent">
+        <div class="customer-list" *ngFor="let data of rows | searchFilter: searchText; let i=index">
+          <div [ngSwitch]="customer.field">
+            <div *ngSwitchCase="'link'">
+              <!--<div class="datarow" [title]="data[customer.valueKey]">{{data[customer.valueKey]}}</div>-->
+              <!--<a class="datarow" [title]="data[customer.valueKey]">{{data[customer.valueKey]}}</a>-->
+              <!--<div class="datarow" app-link [linkValue]="'test'">{{data[customer.valueKey]}}</div>-->
+              <div class="datarow">
+                <app-gridlink [param]="data[customer.valueKey]"></app-gridlink>
+              </div>
+            </div>
+            <div *ngSwitchCase="'text'">
+              <div class="datarow" [title]="data[customer.valueKey]">{{data[customer.valueKey]}}</div>
+            </div>
+            <div *ngSwitchCase="'image'">
+              <div class="datarowImage" [title]="'Edit/Delete'">
+                <div class="data-edit" (click)="editCustomer(data)"></div>
+                <div class="data-delete" (click)="deleteCustomer(data)"></div>
+              </div>
+            </div>
+          </div>
+          <div class="rowSeperator" *ngIf="(rows.length-1) != i"></div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--<div class="card-body">
+    <div *ngFor="let item of pageOfItems">{{item.name}}</div>
+  </div>
+  <div>
+    <jw-pagination [items]="pageOfItems" (changePage)="onChangePage($event)"></jw-pagination>
+  </div>-->
+</div>
+

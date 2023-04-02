@@ -1,0 +1,144 @@
+.modal-header {
+  height: 8vh;
+}
+
+  .modal-header .close {
+    margin: -1.2rem -1rem -1rem auto;
+  }
+
+.modal-title {
+  font-size: 14px;
+}
+
+.modal-body {
+  font-size: 12px;
+  height: 64vh;
+  overflow: auto;
+}
+
+.modal-footer {
+  height: 8vh;
+}
+
+  .modal-footer .btn {
+    font-size: 12px;
+    background: #6666FF;
+    margin: -2px 100px 0 0;
+    width: 5vw;
+    border: 0;
+    color: #fff;
+  }
+
+.form-field {
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 0.3rem;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.form-input {
+  border: 0;
+  width: 100%;
+}
+
+div::-webkit-scrollbar {
+  background: #fff;
+  width: 5px;
+  height: 15px;
+}
+
+div::-webkit-scrollbar-thumb {
+  background: #c5c5c5;
+}
+.label-container {
+    margin-bottom: 8px;
+}
+
+/*::ng-deep .ng-select.ng-select-single .ng-select-container {
+  height: 2rem !important;
+}
+
+::ng-deep .ng-option {
+  font-size: 13px !important;
+  color: #000000 !important;
+  border-bottom: 0.5px solid #E6E6E6 !important;
+  padding: 0.2rem 0.5rem !important;
+  white-space: normal !important;
+}
+::ng-deep .ng-select {
+  cursor: pointer;
+}
+
+::ng-deep .ng-select-container {
+  fill: none !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-size: 13px !important;
+  color: #000000 !important;
+  text-overflow: clip;
+  white-space: normal;
+  word-break: break-all;
+  min-height: 2rem !important;
+}
+::ng-deep .ng-dropdown-panel.ng-select-bottom {
+  box-shadow: 0px 5px 8px 1px rgb(0 0 0 / 20%);
+}
+
+::ng-deep .ng-dropdown-panel.ng-select-top {
+  box-shadow: 0px -5px 8px 1px rgb(0 0 0 / 20%);
+}
+*/
+::ng-deep ng-option div {
+    margin-bottom: 5px !important;
+}
+.label-title {
+    font-weight: 600;
+}
+.caretdown {
+    background-image: url('../../images/caret-down-solid.svg');
+    background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width:1rem;
+    height: 1rem;
+    vertical-align: bottom;
+    display: inline-block;
+}
+.caretup {
+  background-image: url('../../images/caret-up-solid.svg');
+  background-position: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: bottom;
+  display: inline-block;
+}
+.selectplaceholder {
+    display: inline-block;
+    margin-right: 1rem;
+    border:0;
+}
+.list-container {
+    /*display:none;*/
+    border: 1px solid rgba(0,0,0,.2);
+    background:#fff;
+    border-radius: 5px;
+    position:absolute;
+    left:16px;
+    width:12.2rem;
+    z-index:1;
+    top: 58px;
+    height:78px;
+    overflow:auto;
+}
+.list-items {
+    margin-bottom: 6px;
+}
+.list-items:hover {
+    background: #6666ff;
+    border-radius: 2px;
+    width: 11.8rem;
+    color: #fff;
+}

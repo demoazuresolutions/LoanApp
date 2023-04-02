@@ -1,0 +1,107 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{action}} Customer</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="main-container">
+  <form [formGroup]="dynamicForm" class="filter-form" (ngSubmit)="onSubmit()">
+    <div class="modal-body">
+      <div class="form-group">
+        <ng-template #recursiveList let-formFields let-fromGroup="fromGroup">
+          <ng-container *ngFor="let item of formFields">
+            <ng-container *ngIf="item.group; else default;">
+              <!--*ngIf="item.group; else default;"-->
+              <div class="p0-container">
+                <div class="body-container">
+                  <h6 class="header-title">{{item.title}}</h6>
+                  <div class="row pb-4" [formGroupName]="item.key">
+                    <div *ngTemplateOutlet="recursiveList; context:{ $implicit: item.group, fromGroup: {name: item.key} }"></div>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+            <ng-template #default>
+              <ng-container *ngIf="item.type === 'hidden'; else defaultControl;">
+                <div class="form-group">
+                  <!--[formGroupName]="fromGroup.name"-->
+                  <input [type]="item.type" [formControlName]="item.key" placeholder="Enter text" [name]="item.key" />
+                </div>
+              </ng-container>
+              <ng-template #defaultControl>
+                <div class="fields-container">
+                  <div class="col-md-10" [ngClass]="{'resetColor': changeColor === true}">
+                    <div class="form-group">
+                      <!--[formGroupName]="fromGroup.name"-->
+                      <div class="form-field">
+                        <ng-container [ngSwitch]="item.type">
+                          <div class="label-container">
+                            <div class="label-title">
+                              <div class="require" [ngClass]="{'required':item.validators.required === true}">{{item.title}}</div>
+                            </div>
+                          </div>
+
+                          <ng-template [ngSwitchCase]="item.type === 'text' || item.type === 'hidden' || item.type === 'color' || item.type === 'email' || item.type === 'date' || item.type === 'number' || item.type === 'url'  ? item.type : '' ">
+                            <span title="{{item.key}}">
+                              <input [type]="item.type" [formControlName]="item.key" [placeholder]="item.placeholder" [name]="item.key" class="form-input" />
+                            </span>
+                          </ng-template>
+
+                          <ng-template [ngSwitchCase]="'textarea'">
+                            <span title="{{item.key}}">
+                              <textarea [formControlName]="item.key" placeholder="{{item.placeholder}}" [name]="item.key" class="form-input"></textarea>
+                            </span>
+                          </ng-template>
+
+                          <ng-template [ngSwitchCase]="'select'">
+                            <!--<ng-select [formControlName]="item.key" placeholder="Select option" dropdownPosition="bottom"
+                                       name="item.key" [virtualScroll]="true">
+                              <ng-option><div>Select option</div></ng-option>
+                              <ng-option *ngFor="let option of (item.options | async)" [value]="option.value">
+                                <div title="{{option.optionName}}">{{option.optionName}}</div>
+                              </ng-option>
+                            </ng-select>-->
+                            <!--<ng-select [searchable]="false" [clearable]="false" formControlName="agree">
+                              <ng-option [value]="'test1'"> Test1</ng-option>
+                              <ng-option [value]="'test2'"> Test2</ng-option>
+                            </ng-select>-->
+                            <div class="selectcontainer">
+                              <input class="selectplaceholder" [formControlName]="item.key" name="item.key" [(ngModel)]="selectedOption"/>
+                              <div [ngClass]="!displaylistcontainer ? 'caretdown':'caretup'" (click)="togglelistcontainer()"></div>
+                            </div>
+                            <div class="list-container" *ngIf="displaylistcontainer">
+                              <div class="list-items" *ngFor="let option of (item.options | async)"  (click)="oncustomerSelect(option.optionName, option.value)"><span title="{{option.optionName}}" value="{{option.value}}">{{option.optionName}}</span></div>
+                            </div>
+                          </ng-template>
+
+                        </ng-container>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </ng-template>
+          </ng-container>
+        </ng-template>
+        <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: formFields }"></ng-container>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <ng-container *ngIf="action == 'Add'">
+        <button type="submit" class="btn btn-outline-dark">Add</button>
+      </ng-container>
+      <ng-container *ngIf="action == 'Edit'">
+        <button type="submit" class="btn btn-outline-dark">Save</button>
+      </ng-container>
+    </div>
+  </form>
+</div>
+
+<!--<div class="main-container">
+  <form [formGroup]="dynamicForm" (ngSubmit)="onSubmit()">
+      <div *ngFor="let item of formFields">
+        <div>{{item.key}}</div>
+      </div>
+    <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: filterFields }"></ng-container>
+  </form>
+</div>-->

@@ -1,0 +1,58 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{action}} Customer</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<form [formGroup]="customerForm" (ngSubmit)="submit()">
+  <div class="modal-body">
+    <div class="form-group">
+      <div class="form-field">
+        <div>
+          <label class="form-label">First Name</label>
+        </div>
+        <input class="form-input" formControlName="firstName" placeholder="Enter First Name" name="FirstName">
+      </div>
+      <div class="form-field">
+        <div>
+          <label class="form-label">Last Name</label>
+        </div>
+        <input class="form-input" formControlName="lastName" placeholder="Enter Last Name" name="LastName">
+      </div>
+      <div class="form-field">
+        <div>
+          <label class="form-label">Phone Number</label>
+        </div>
+        <input class="form-input" formControlName="phoneNumber" placeholder="Enter Phone Number" name="PhoneNumber">
+      </div>
+      <div class="form-field">
+        <div>
+          <label class="form-label">Email Address</label>
+        </div>
+        <input class="form-input" formControlName="emailAddress" placeholder="Enter Email Address" name="EmailAddress">
+      </div>
+      <div class="form-field">
+        <div>
+          <label class="form-label">Address</label>
+        </div>
+        <textarea class="form-input" formControlName="address" placeholder="Enter Address" name="Address"></textarea>
+      </div>
+      <div class="form-field">
+        <div>
+          <label class="form-label">Department</label>
+        </div>
+        <input class="form-input" formControlName="department" placeholder="Enter Department" name="Department">
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <!--<button type="button" class="btn btn-outline-dark" (click)="activeModal.dismiss('Close click')">Cancel</button>-->
+    <ng-container *ngIf="action == 'Add'">
+      <button type="submit" class="btn btn-outline-dark">Add</button>
+    </ng-container>
+    <ng-container *ngIf="action == 'Edit'">
+      <button type="submit" class="btn btn-outline-dark">Save</button>
+    </ng-container>
+  </div>
+</form>
+

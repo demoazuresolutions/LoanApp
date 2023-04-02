@@ -1,0 +1,162 @@
+.body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.customersContainer {
+    /*display:flex;*/
+    border:1px solid #D3D3D3;
+    height:60vh;
+    width:80vw;
+    margin: 30px 0px 0px 20px;
+    background-color: #fff;
+    overflow-x:auto;
+}
+.header-section {
+  /*width: 8.5rem;*/
+}
+.header {
+  /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+  font-size: small;
+  font-weight: bold;
+  width: 9rem;
+  border-bottom: 1px solid #BFBFBF;
+  line-height: 3;
+  display: inline-block;
+/*  background-image: url('../../../images/arrow-up-solid.svg');
+  background-repeat: no-repeat;
+  background-position: 50%;*/
+}
+.header.emailAddress {
+  width:10rem;
+  /*background-color: red;*/
+}
+.datarow {
+  /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+  font-size: small;
+  width: 8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 2.5;
+}
+.container {
+    display: flex;
+    margin-top: 20px;
+}
+.entity {
+  /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+  font-size: 24px;
+  width: 8rem;
+  font-weight: 500;
+}
+.addCustomer {
+    background-color: #6666FF;/*#D580FF;;*/
+    color: #fff;
+    border-radius: 3px;
+    border: 0px;
+    font-size: small;
+    height: 27px;
+}
+.addNew {
+    margin-top: 7px;
+}
+.rowSeperator {
+  border-bottom: 1px solid #D9D9D9;
+}
+/*.customersContainer .customer-list .rowSeperator:last-child {
+  border: none;
+}
+*/
+.searchFilterContainer {
+    display: flex;
+    float: left;
+    margin-top: 17px;
+    font-size: small;
+}
+.gridContainer {
+  display: flex;
+  float: left;
+  height:50vh;
+  overflow: auto;
+}
+/*div::-webkit-scrollbar {
+  background: #fff;
+  width: 5px;
+  height: 15px;
+}
+
+div::-webkit-scrollbar-thumb {
+  background: #c5c5c5;
+}*/
+::ng-deep .modal-content {
+    width: 60% !important;
+    left: 5rem;
+    height: 81vh;
+    top: 2rem;
+    /*overflow: auto;*/
+}
+::ng-deep .modal-dialog {
+  height: 106vh;
+}
+.data-delete {
+  background-image: url('../../../images/delete-user-grey.svg');
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+  display: inline-block;
+  cursor: pointer;
+}
+.data-edit {
+  background-image: url('../../../images/edit-user-grey.svg');
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+  display: inline-block;
+  cursor: pointer;
+  margin-right:14px;
+}
+  .data-edit:hover {
+    background-image: url('../../../images/edit-user-blue.svg');
+  }
+  .data-delete:hover {
+    background-image: url('../../../images/delete-user-blue.svg');
+  }
+  .datarowImage {
+    width: 8rem;
+    line-height: 2;
+  }
+div::-webkit-scrollbar {
+  background: #fff;
+  width: 5px;
+  height: 5px;
+}
+
+div::-webkit-scrollbar-thumb {
+  background: #c5c5c5;
+}
+.sortasc {
+  background-image: url('../../../images/arrow-up-solid.svg');
+  display: inline-block;
+  width:1rem;
+  height: 1rem;
+  background-repeat:no-repeat;
+  background-position: 50%;
+  background-size: contain;
+  cursor: pointer;
+}
+.sortdesc {
+  background-image: url('../../../images/arrow-down-solid.svg');
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+  cursor: pointer;
+}
+.customer-list-parent {
+}

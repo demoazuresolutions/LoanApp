@@ -1,0 +1,18 @@
+.footerImage {
+  background-image: url('../../images/copyright.svg');
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1rem;
+}
+
+.footerTxt {
+  width: 18rem;
+  display: inline-block;
+  margin-left: 0.3rem;
+  vertical-align: bottom;
+  font-size: small;
+}
