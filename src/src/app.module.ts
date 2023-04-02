@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-
+import { getBaseUrl } from '../main';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
@@ -65,7 +65,7 @@ import { DynamicformComponent } from './dynamicform/dynamicform.component';
   ],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA],
-  providers: [AddCustomerComponent, AddpaymentComponent, NgbActiveModal, { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }],
+  providers: [AddCustomerComponent, AddpaymentComponent, NgbActiveModal,{ provide: 'BASE_URL', useFactory: getBaseUrl }, { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }],
   entryComponents: [AddCustomerComponent, AddpaymentComponent, DynamicformComponent]
 })
 export class AppModule { }
